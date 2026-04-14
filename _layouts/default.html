@@ -15,6 +15,9 @@
 
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
+    {% include ga4.html %}
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8224823234031142" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="/css/drupal.css" />
     <link rel="stylesheet" href="/css/codefilter.css" />
     <link rel="stylesheet" href="/css/style.css" />
@@ -84,6 +87,17 @@
                     <li><a href="/style-switcher-in-asp">Style Switcher in ASP</a> (4.37)</li>
                 </ul>
             </div>
+            {% if page.layout == 'post' %}
+            <div class="block">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-8224823234031142"
+                     data-ad-slot="ARTICLE_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+            {% endif %}
         </div><!-- /sidebar left -->
 
         <div class="main-content-node" id="content-left">
