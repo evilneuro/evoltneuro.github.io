@@ -54,8 +54,13 @@ pre {
     height: auto;
     margin: 0;
     padding: 0.25em 0.75em;
-    /* remove cube background images — padding no longer accommodates them */
-    background-image: none;
+  }
+
+  /* Match original selector specificity to remove cube background images */
+  div#header ul#sections li#sectionwork,
+  div#header ul#sections li#sectiontest,
+  div#header ul#sections li#sectiondonate {
+    background: none;
   }
 
   div#header ul#sections li p {
@@ -164,6 +169,14 @@ pre {
   /* Article list ad: hide on mobile */
   .ad-list {
     display: none;
+  }
+
+  /* Un-float article images on mobile so they don't wrap text awkwardly */
+  .node-sticky img {
+    float: none;
+    display: block;
+    margin: 0.5em 0;
+    max-width: 100%;
   }
 
   /* Footer */
