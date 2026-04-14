@@ -16,54 +16,8 @@
     <style type="text/css" media="all">@import "/css/drupal.css";</style>
     <style type="text/css">@import url(/css/codefilter.css);</style>
 
-    <script src="https://www.google-analytics.com/urchin.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        _uacct = "UA-25047390-2";
-        _udn = ".evolt.org";
-        urchinTracker();
-    </script>
-
-    <!--    ####     # The following CSS is IE only, as per	# http://virtuelvis.com/archives/2004/02/css-ie-only    ####    -->
-    <!--[if IE]>
-    <link rel="stylesheet" href="themes/evolt/structure_ie.css" type="text/css" />
-    <![endif]-->
-
     <style type="text/css" media="all">@import "/css/style.css";</style>
-    <!--    ####     # the following print CSS needs to be moved into the $styles php above - here for now for testing purposes    ####    -->
     <link rel="stylesheet" href="/css/print.css" media="print" type="text/css"/>
-    <!-- Javascript for login form select. A smarter person would conditionalise this on whether there's a logged in user... -->
-    <script language="JavaScript" type="text/javascript">
-        <!--
-        function validateLogin(form)
-        {
-            if(!form.username.value || form.username.value == 'username')
-            {
-                alert('Username is required to login.');
-                form.username.focus();
-                return false;
-            }
-            if(!form.password.value)
-            {
-                alert('Password is required to login.');
-                form.password.focus();
-                return false;
-            }
-            return true;
-        }
-        //-->
-    </script>
-    <script>
-        (function() {
-            var cx = '014253284978097689591:upxjiok6qmu';
-            var gcse = document.createElement('script');
-            gcse.type = 'text/javascript';
-            gcse.async = true;
-            gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-                    '//www.google.com/cse/cse.js?cx=' + cx;
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(gcse, s);
-        })();
-    </script>
 </head>
 
     <body>
@@ -90,8 +44,6 @@
             </li>
         </ul>
     </div>
-
-    {% include search.html %}
 
     <div id="content"><div id="channel">
         <!-- this item really shouldn't be done this way -->
@@ -185,9 +137,6 @@
             <h2 class="access"><a name="main-page-content">Main Page Content</a></h2>
 
           {{ content }}
-
-            <!-- Add in the Google search results -->
-            <gcse:searchresults-only linkTarget="_top"></gcse:searchresults-only>
 
             <!-- end main content -->
             <div style="clear: both"></div>

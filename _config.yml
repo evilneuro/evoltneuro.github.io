@@ -1,4 +1,4 @@
 title: evolt.org
-markdown: redcarpet
-highlighter: true
+markdown: kramdown
+highlighter: rouge
 paginate: 10
