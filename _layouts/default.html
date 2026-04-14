@@ -1,26 +1,27 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
+<!DOCTYPE html>
+<html lang="en-GB">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>{{ page.title }} | {{ site.title }}</title>
 
-    <meta name="Copyright" content="&copy; evolt.org and its members" />
-    <meta name="Keywords" content="web, internet, design, technology, interface, multimedia, script, commentary, hardware, software, articles, news" />
-    <meta name="Description" content="A world community for web developers, evolt.org promotes the mutual free exchange of ideas, skills and experiences." />
+    <meta name="copyright" content="&copy; evolt.org and its members" />
+    {% if page.excerpt %}
+    <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}" />
+    {% else %}
+    <meta name="description" content="A world community for web developers, evolt.org promotes the mutual free exchange of ideas, skills and experiences." />
+    {% endif %}
 
-    <meta http-equiv="Content-Style-Type" content="text/css" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
-    <style type="text/css" media="all">@import "/css/drupal.css";</style>
-    <style type="text/css">@import url(/css/codefilter.css);</style>
-
-    <style type="text/css" media="all">@import "/css/style.css";</style>
-    <link rel="stylesheet" href="/css/print.css" media="print" type="text/css"/>
+    <link rel="stylesheet" href="/css/drupal.css" />
+    <link rel="stylesheet" href="/css/codefilter.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/print.css" media="print" />
 </head>
 
-    <body>
+<body>
 
     <!-- start accessibility skip to content -->
     <div id="access-skip" class="access">
@@ -30,7 +31,7 @@
     <!-- end accessibility skip -->
 
     <div id="header"><h2 class="access">Start of page header</h2>
-        <a href="/" title="Return to the home page" accesskey="1" ><img src="/images/evoltorg.gif" alt="evolt.org" title="Welcome to evolt.org" id="logo" /></a>
+        <a href="/" title="Return to the home page" accesskey="1"><img src="/images/evoltorg.gif" alt="evolt.org" title="Welcome to evolt.org" id="logo" /></a>
         <h2 class="access"><a name="other-sites">Other Fine Evolt.org Sites</a></h2>
         <ul id="sections">
             <li id="sectionwork"><a href="/archive.html" title="list and articles">Work</a>
@@ -39,17 +40,13 @@
             <li id="sectiontest"><a href="https://browsers.evolt.org/" title="browser archive">Test</a>
                 <p>browser archive</p>
             </li>
-            <li id="sectiondonate"><a href="/help_support_evolt" title="keep evolt.org alive">Donate</a>
-                <p>keep evolt.org alive</p>
-            </li>
         </ul>
     </div>
 
     <div id="content"><div id="channel">
-        <!-- this item really shouldn't be done this way -->
         <p class="work-title"><a href="/archive.html">Work</a></p>
         <ul id="secondary">
-            <li><a href="/about">About Us</a></li><li><a href="https://lists.evolt.org/">Lists</a></li><li><a href="/categories/jobs">Jobs</a></li>
+            <li><a href="/about">About Us</a></li><li><a href="https://lists.evolt.org/">Lists</a></li>
         </ul>
         <ul id="secondary-constants">
             <li><a href="/categories/faq" accesskey="5">FAQ</a></li>
@@ -58,10 +55,6 @@
     </div>
 
         <div class="sidebar" id="sidebar-left"><h2 class="access"><a name="content-categories">Navigation Starts</a></h2>
-            <div class="block">
-                <h4>Submit</h4>
-                <a href="/submit">Submit articles, news or reviews for publication on evolt</a>
-            </div>
             <div class="block">
                 <h4>Article Categories</h4>
                 <div class="menu">
@@ -87,72 +80,32 @@
                 <ul>
                     <li><a href="/PHP-Login-System-with-Admin-Features">PHP Login System with Admin Features</a> (4.59)</li>
                     <li><a href="/where-what-vision-systems-and-visual-design">Where / What Vision Systems and Visual Design</a> (4.52)</li>
-                    <!-- <li><a href="/node/21234">A Simple Character Entity Chart</a> (4.51)</li> -->
                     <li><a href="/php_login_script_with_remember_me_feature">PHP Login Script with Remember Me Feature</a> (4.5)</li>
-                    <li><a href="/style-switcher-in-asp">Style Switcher in ASP</a> (4.37)</li></ul>
+                    <li><a href="/style-switcher-in-asp">Style Switcher in ASP</a> (4.37)</li>
+                </ul>
             </div>
-
-            <div class="block">
-                <h4></h4>
-                <!-- Donations block -->
-                <div id="donation">
-                    <h3>
-                        <a href="/help_support_evolt">Help Support evolt.org</a>
-                    </h3>
-                    <p>Evolt.org is an <strong>all volunteer</strong> organisation that relies on member support to survive and grow.
-                        <a href="/help_support_evolt">Find out</a> how you can help through:</p>
-                    <ul>
-                        <li><a href="/help_support_evolt#donations">Giving Money &raquo;</a></li>
-                        <li><a href="/help_support_evolt#technical">Providing Mirror Servers &raquo;</a></li>
-                        <li><a href="http://www.cafepress.com/evoltgear">Buying evolt.org merchandise &raquo;</a></li>
-                        <li><a href="/help_support_evolt#knowledge">Contributing your knowledge and expertise  &raquo;</a></li>
-                    </ul>
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                        <input type="hidden" name="cmd" value="_xclick" />
-                        <input type="hidden" name="business" value="give@evolt.org" />
-                        <input type="hidden" name="item_name" value="evolt.org's shameless tin cup" />
-                        <input type="hidden" name="item_number" value="1" />
-                        <input type="image" src="/images/paypalone.gif" border="0" name="submit" alt="Support evolt.org with your donation of any amount" width="97" height="31" /></form>
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                        <input type="hidden" name="cmd" value="_xclick-subscriptions" />
-                        <input type="hidden" name="business" value="give@evolt.org" />
-                        <input type="hidden" name="item_name" value="evolt.org: $15 monthly support" />
-                        <input type="hidden" name="item_number" value="15" />
-                        <input type="hidden" name="no_shipping" value="1" />
-                        <input type="hidden" name="return" value="https://evolt.org" />
-                        <input type="hidden" name="no_note" value="1" />
-                        <input type="hidden" name="currency_code" value="USD" />
-                        <input type="image" src="/images/paypal15.gif" border="0" name="submit" alt="Support evolt.org with your monthly $15 donation" width="97" height="31" />
-                        <input type="hidden" name="a3" value="15.00" />
-                        <input type="hidden" name="p3" value="1" />
-                        <input type="hidden" name="t3" value="M" />
-                        <input type="hidden" name="src" value="1" />
-                        <input type="hidden" name="sra" value="1" />
-                    </form>
-                </div>
-                <!-- Donations Block --></div>
         </div><!-- /sidebar left -->
 
         <div class="main-content-node" id="content-left">
             <h2 class="access"><a name="main-page-content">Main Page Content</a></h2>
 
-          {{ content }}
+            {{ content }}
 
-            <!-- end main content -->
             <div style="clear: both"></div>
         </div><!-- mainContent -->
         <div class="spacer"></div>
     </div><!-- end content -->
+
     <div id="footer">
-        <p>Evolt.org is a world community for web developers, promoting the mutual free exchange of ideas, skills and experiences.</p>
+        <p>evolt.org was a world community for web developers, promoting the mutual free exchange of ideas, skills and experiences. Founded in 1998, the community ran until 2024. This site is preserved as an archive.</p>
     </div>
+
     <!-- start accessibility info -->
     <div id="access-info" class="access">
-        <p class="access" ><a name="accesskey-list">The access keys for this page are</a>: ALT (Control on a Mac) plus:</p>
+        <p class="access"><a name="accesskey-list">The access keys for this page are</a>: ALT (Control on a Mac) plus:</p>
         <ul class="access">
             <li>1 links to the evolt.org home page.</li>
             <li>plus 2 skips to the main content of the page.</li>
-            <li>plus 3 skips to login and registration.</li>
             <li>plus 4 skips to the search form.</li>
             <li>plus 5 links to site FAQs.</li>
             <li>plus 6 skips to <a href="/#content-categories" accesskey="6">list of content categories</a> in this site.</li>
@@ -161,8 +114,11 @@
             <li>plus 0 will repeat this list.</li>
         </ul>
     </div><!-- end accessibility info -->
+
     <div id="printheader">
-        <a href="/" title="evolt.org Home Page"><img src="/images/logo_print.gif" width="134" height="50" alt="evolt.org" border="0" align="left" hspace="10" />
-        </a>Evolt.org is an all-volunteer resource for web developers made up of a discussion list, a browser archive, and member-submitted articles.  This article is the property of its author, please do not redistribute or use elsewhere without checking with the author.</div>
-    </body>
+        <a href="/" title="evolt.org Home Page"><img src="/images/logo_print.gif" width="134" height="50" alt="evolt.org" /></a>
+        evolt.org is an all-volunteer resource for web developers made up of a discussion list, a browser archive, and member-submitted articles. This article is the property of its author, please do not redistribute or use elsewhere without checking with the author.
+    </div>
+
+</body>
 </html>

@@ -17,8 +17,7 @@ layout: default
         <p>by <strong>{{ page.real_name }}</strong> ({{ page.user }})</p>
     </div>
     <div id="participate">
-
-        <p>Rated <strong>{{ page.rating }} (Ratings: {{ page.ratings }})</strong> <!--(<a href="FoodPhotos#node-actions">Add your rating</a>)--></p>
+        <p>Rated <strong>{{ page.rating }} (Ratings: {{ page.ratings }})</strong></p>
     </div>
     <div id="want-more">
         <h4>Want more?</h4>
@@ -38,14 +37,8 @@ layout: default
     <img class="portrait" src="{{ page.avatar }}" alt="Picture of {{ page.user }}" />
     {% endif %}
     <h4>{{ page.real_name }}</h4>
-    <p><a href="#authorbio">Member info</a><!-- | <a href="/user/88">Full bio</a> --></p>
-    <!-- <p><a href="/cubes_definition/index.html">
-    <img src="/themes/evolt/6alt_rating09.gif" title="{{ page.user }} has written 85 articles" /> -->
-    <!-- What's this?--> <!-- </a></p> -->
-
+    <p><a href="#authorbio">Member info</a></p>
     <p>User since: <strong>{{ page.user_since }}</strong></p>
-    <!-- <p>Last login: <strong>March 15, 2013</strong></p> -->
-
     <p>Articles written: <strong>{{ page.article_count }}</strong></p>
 </div>
 
