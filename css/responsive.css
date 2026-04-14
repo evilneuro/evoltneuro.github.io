@@ -1,0 +1,216 @@
+/* =============================================================================
+   evolt.org responsive.css
+   Mobile-first overrides for the article and archive templates.
+   Additive only — does not modify existing CSS files.
+   Front-facing modern pages (front.html, front_page.html) use separate CSS.
+   ============================================================================= */
+
+/* Global: responsive images and scrollable code blocks */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+pre {
+  overflow-x: auto;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.node-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 1em 0;
+}
+
+/* =============================================================================
+   Mobile — single column (max-width: 640px)
+   ============================================================================= */
+@media screen and (max-width: 640px) {
+
+  /* Header: remove fixed height, stack logo and nav */
+  div#header {
+    height: auto;
+    padding: 0.5em;
+  }
+
+  div#header img#logo {
+    float: none;
+    display: block;
+    margin: 0 auto 0.5em;
+  }
+
+  div#header ul#sections {
+    float: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25em;
+  }
+
+  div#header ul#sections li {
+    float: none;
+    height: auto;
+    margin: 0;
+    padding: 0.25em 0.75em;
+  }
+
+  div#header ul#sections li p {
+    display: none;
+  }
+
+  /* Channel nav: allow wrapping */
+  div#channel {
+    height: auto;
+    padding: 0.25em 0;
+  }
+
+  div#channel ul#secondary,
+  div#channel ul#secondary-constants {
+    padding: 0.25em 0;
+  }
+
+  /* Content area: remove side margins */
+  div#content {
+    margin: 0.5em;
+  }
+
+  /* Sidebar: remove float, stack above content */
+  div#sidebar-left {
+    float: none;
+    width: auto;
+    clear: both;
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1em;
+  }
+
+  /* Sidebar blocks: tighter on mobile */
+  div#sidebar-left .block {
+    margin-bottom: 0.75em;
+  }
+
+  /* Sidebar category list: two columns on mobile to save space */
+  div#sidebar-left .menu ul {
+    column-count: 2;
+    column-gap: 1em;
+  }
+
+  /* Hide sidebar ad on mobile — not enough room */
+  div#sidebar-left ins.adsbygoogle {
+    display: none !important;
+  }
+
+  /* Content: full width, remove reserved margin for sidebar */
+  #content-left {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Article metadata: stack vertically */
+  div.postinfo-story {
+    float: none;
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+    margin-bottom: 0.5em;
+  }
+
+  #participate {
+    float: none;
+    padding-left: 0;
+    margin: 0.5em 0;
+  }
+
+  /* Want-more: full width, styled as a callout */
+  #want-more {
+    float: none;
+    width: auto;
+    margin: 1em 0;
+    padding: 0.75em;
+    border-left: 3px solid #999;
+    background: #f9f9f9;
+  }
+
+  /* Author box: full width, above article body */
+  #authorbox {
+    float: none;
+    width: auto;
+    margin: 0 0 1.5em 0;
+    padding: 0.75em;
+    border: 1px solid #ccc;
+    overflow: hidden;
+  }
+
+  #authorbox .portrait {
+    float: left;
+    margin: 0 1em 0.5em 0;
+    max-width: 60px;
+  }
+
+  /* Article list ad: hide on mobile */
+  .ad-list {
+    display: none;
+  }
+
+  /* Footer */
+  div#footer {
+    margin: 0.5em;
+  }
+
+  /* Accessibility info: ensure it wraps properly */
+  div#access-info ul {
+    padding-left: 1em;
+  }
+}
+
+/* =============================================================================
+   Tablet — constrained two-column (641px to 900px)
+   ============================================================================= */
+@media screen and (min-width: 641px) and (max-width: 900px) {
+
+  /* Narrower sidebar */
+  div#sidebar-left {
+    width: 140px;
+  }
+
+  /* Content: match narrower sidebar */
+  #content-left {
+    margin-left: 155px;
+  }
+
+  /* Narrower author box and want-more */
+  #authorbox {
+    width: 155px;
+  }
+
+  #want-more {
+    width: 155px;
+  }
+
+  /* Hide list ad on tablet — not enough room alongside content */
+  .ad-list {
+    display: none;
+  }
+
+  /* Header: slightly more compact */
+  div#header ul#sections li {
+    margin-right: 1em;
+    padding-left: 1.5em;
+  }
+}
+
+/* =============================================================================
+   Desktop — full layout (901px+)
+   ============================================================================= */
+@media screen and (min-width: 901px) {
+
+  /* Show and position list ad */
+  .ad-list {
+    display: block;
+    float: right;
+    width: 160px;
+    margin-left: 1em;
+  }
+}
