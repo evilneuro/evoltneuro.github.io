@@ -54,21 +54,33 @@ pre {
     height: auto;
     margin: 0;
     padding: 0.25em 0.75em;
+    /* remove cube background images — padding no longer accommodates them */
+    background-image: none;
   }
 
   div#header ul#sections li p {
     display: none;
   }
 
-  /* Channel nav: allow wrapping */
+  /* Channel nav: remove fixed height and hide redundant Work title */
   div#channel {
     height: auto;
+    overflow: hidden;
     padding: 0.25em 0;
   }
 
-  div#channel ul#secondary,
+  div#channel .work-title {
+    display: none;
+  }
+
+  div#channel ul#secondary {
+    float: none;
+    margin: 0.25em 0;
+  }
+
   div#channel ul#secondary-constants {
-    padding: 0.25em 0;
+    float: none;
+    margin: 0.25em 0;
   }
 
   /* Content area: remove side margins */
